@@ -15,7 +15,6 @@ This project involves the design and implementation of a single-server web infra
 - **Linux OS:** Utilizes Ubuntu Server for the operating system.
 - **Apache (Web Server):** Serves HTTP requests and hosts website content.
 - **MySQL (Database):** Stores and manages website data.
-- **PHP (Server-Side Scripting):** Executes application logic and generates dynamic content.
 
 ## Specifics and Purpose:
 
