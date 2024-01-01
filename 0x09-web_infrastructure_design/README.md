@@ -35,5 +35,10 @@ This project involves the design and implementation of a single-server web infra
 - **Security Measures:** Implement firewall rules and regular updates for enhanced security.
 - **Maintenance:** Plan regular backups and maintenance schedules for optimal performance.
 
+
+## Authors:
+
+- Pcosby5
+- danielntow
 ---
 
