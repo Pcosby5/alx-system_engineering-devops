@@ -1,8 +1,32 @@
-#!/usr/bin/env bash
-# Installs nginx server
-apt-get update
-apt-get -y install nginx
-sudo ufw allow 'Nginx HTTP'
-echo "Hello World!" > /var/www/html/index.html
-service nginx start
+#!/bin/bash
+
+# Update package list
+sudo apt update
+
+# Install Nginx
+sudo apt install -y nginx
+
+# Create a simple HTML page
+echo "<html>
+  <head>
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <p>Hello World!</p>
+  </body>
+</html>" | sudo tee /var/www/html/index.html
+
+# Configure Nginx
+echo "server {
+    listen 80;
+    441408-web-01;
+
+    location / {
+        root /var/www/html;
+        index index.html;
+    }
+}" | sudo tee /etc/nginx/sites-available/default
+
+# Restart Nginx
+sudo /etc/init.d/nginx restart
 
