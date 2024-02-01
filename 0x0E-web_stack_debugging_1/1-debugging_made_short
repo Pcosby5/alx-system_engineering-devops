@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
-# debugging nginx (service (init) must say that nginx is not running)
+# Fix Nginx not listening on port 80
 
-sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
-service nginx restart
-pkill -o nginx
+# Stop Nginx if it's already running
+service nginx stop
+
+# Start Nginx and force it to listen on port 80
+/usr/sbin/nginx -g "daemon off;" -c /etc/nginx/nginx.conf
+
