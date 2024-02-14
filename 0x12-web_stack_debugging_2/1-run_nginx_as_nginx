@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Install nginx if not already installed
+if ! command -v nginx &> /dev/null; then
+    echo "Installing nginx..."
+    # Command to install nginx if necessary
+    # For example, if using Alpine Linux:
+    # apk add --no-cache nginx
+fi
+
+# Make sure nginx user exists
+if ! id -u nginx &>/dev/null; then
+    echo "Creating nginx user..."
+    # Command to create nginx user if necessary
+    # For example:
+    # adduser -D -H nginx
+fi
+
+# Set correct permissions for nginx directories
+chown -R nginx:nginx /var/lib/nginx
+
+# Configure nginx to run as nginx user
+sed -i 's/^user .*;/user nginx;/g' /etc/nginx/nginx.conf
+
+# Change nginx listening port to 8080
+sed -i 's/^listen  .*;/listen 8080;/g' /etc/nginx/nginx.conf
+
+# Start nginx service
+echo "Starting nginx..."
+nginx -g 'daemon off;'
+
