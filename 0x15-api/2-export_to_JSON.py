@@ -39,8 +39,9 @@ if __name__ == '__main__':
             "completed": task.get('completed'),
             "username": username
         }
-        json_dict["employee_id"].append({task_obj})
+        json_dict["employee_id"].append(task_obj)
 
     # Export into json file
     with open('{}.json'.format(employee_Id), 'w') as file:
         json.dump(json_dict, file)
+
