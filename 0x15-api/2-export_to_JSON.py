@@ -40,8 +40,6 @@ if __name__ == '__main__':
             "username": username
         })
 
-
     # Export into json file
     with open('{}.json'.format(employee_Id), 'w') as file:
         json.dump(json_dict, file)
-
