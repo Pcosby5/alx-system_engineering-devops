@@ -23,7 +23,8 @@ if __name__ == '__main__':
         username = user.get('username')
 
         # URL to fetch tasks for the current user
-        todo_url = "https://jsonplaceholder.typicode.com/users/{}/todos/".format(user_id)
+        todo_url = ("https://jsonplaceholder.typicode.com/users/{}/todos/"
+        .format(user_id))
 
         # Fetching tasks for the user
         response = requests.get(todo_url)
