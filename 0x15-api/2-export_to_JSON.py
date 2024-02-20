@@ -31,15 +31,15 @@ if __name__ == '__main__':
     tasks = response.json()
 
     # Construct a dictionary
-    json_dict = {"employee_id": []}
+    json_dict = {employee_Id: []}
 
     for task in tasks:
-        task_obj = {
+        json_dict[employee_Id].append({
             "task": task.get('title'),
             "completed": task.get('completed'),
             "username": username
-        }
-        json_dict["employee_id"].append(task_obj)
+        })
+
 
     # Export into json file
     with open('{}.json'.format(employee_Id), 'w') as file:
