@@ -32,7 +32,6 @@ if __name__ == '__main__':
     # Construct a dictionary
     json_dict = {"employee_id": []}
 
-    #iterate the tasks
     for task in tasks:
         task_obj = {
             "task": task.get('title'),
