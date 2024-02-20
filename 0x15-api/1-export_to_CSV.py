@@ -10,10 +10,10 @@ if __name__ == '__main__':
     employee_Id = sys.argv[1]
 
     # Base URL for the API
-    base_Url = "https://jsonplaceholder.typicode.com"
+    base_Url = "https://jsonplaceholder.typicode.com/users"
 
     # Constructing the URL for fetching employee details
-    url = base_Url + "/users" + "/" + employee_Id
+    url = base_Url + "/" + employee_Id
 
     # Fetching employee details
     response = requests.get(url)
