@@ -35,7 +35,3 @@ def top_ten(subreddit):
             print("No data found for the subreddit.")
     else:
         print(None)
-
-# Example usage:
-subreddit = 'python'
-top_ten(subreddit)
