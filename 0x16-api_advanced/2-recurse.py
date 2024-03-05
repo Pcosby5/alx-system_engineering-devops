@@ -1,25 +1,13 @@
 #!/usr/bin/python3
 """
-Recursively queries the Reddit API and returns a list containing the titles of all hot articles
-for a given subreddit.
+Recursively queries the Reddit API
 """
 
 import requests
 
 
 def recurse(subreddit, hot_list=None, after=None):
-    """
-    Recursively queries the Reddit API and returns a list containing the titles of all hot articles
-    for a given subreddit.
-
-    Args:
-        subreddit (str): The name of the subreddit.
-        hot_list (list): A list containing the titles of hot articles (default is None).
-        after (str): The name of the last post in the previous page (default is None).
-
-    Returns:
-        list: A list containing the titles of all hot articles for the subreddit.
-              Returns None if no results are found or the subreddit is invalid.
+    """and returns a list of the titles of all hot articles
     """
     if hot_list is None:
         hot_list = []
