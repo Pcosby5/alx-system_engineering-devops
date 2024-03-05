@@ -23,7 +23,7 @@ def number_of_subscribers(subreddit):
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
 
     # Set custom User-Agent to avoid Too Many Requests error
-    headers = {'User-Agent': 'Custom-User-Agent'}
+    headers = {'User-Agent': 'Google Chrome Version 81.0.4044.129'}
 
     # Send GET request to the Reddit API
     response = requests.get(url, headers=headers, allow_redirects=False)
