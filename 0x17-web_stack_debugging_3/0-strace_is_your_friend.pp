@@ -1,17 +1,10 @@
-# Puppet manifest to fix Apache 500 error
-class apache_fix {
-    package { 'apache2':
-        ensure => installed,
-    }
+# A puppet manuscript to replace a line in a file on a server
+
+$file_to_edit = '/var/www/html/wp-settings.php'
+
+#replace line containing "phpp" with "php"
+
+exec { 'replace_line':
+  command => "sed -i 's/phpp/php/g' ${file_to_edit}",
+  path    => ['/bin','/usr/bin']
 }
-
-    file { '/etc/apache2/apache2.conf':
-        ensure  => file,
-        content => template('apache/apache2.conf.erb'),
-        notify  => Service['apache2'],
-    }
-
-
-    service { 'apache2':
-        ensure  => running,
-        enable}
