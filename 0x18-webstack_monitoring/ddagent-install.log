@@ -1,0 +1,72 @@
+[34m
+* Datadog Agent 7 install script v1.28.2
+[0m
+[34m
+* Installing apt-transport-https, curl and gnupg
+[0m
+Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Get:3 https://download.docker.com/linux/ubuntu jammy InRelease [48.8 kB]
+Hit:4 https://deb.nodesource.com/node_14.x jammy InRelease
+Get:5 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+Hit:6 http://security.ubuntu.com/ubuntu xenial-security InRelease
+Get:7 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [109 kB]
+Get:8 https://download.docker.com/linux/ubuntu jammy/stable amd64 Packages [27.8 kB]
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1272 kB]
+Get:10 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [228 kB]
+Get:11 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [1572 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1492 kB]
+Get:13 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [263 kB]
+Get:14 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [851 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [288 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [1605 kB]
+Get:17 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [162 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [268 kB]
+Get:19 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1058 kB]
+Get:20 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [239 kB]
+Get:21 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [67.1 kB]
+Get:22 http://archive.ubuntu.com/ubuntu jammy-backports/main Translation-en [11.0 kB]
+Get:23 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [28.4 kB]
+Get:24 http://archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [16.2 kB]
+Fetched 9835 kB in 29s (337 kB/s)
+Reading package lists...
+W: https://download.docker.com/linux/ubuntu/dists/jammy/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+W: http://security.ubuntu.com/ubuntu/dists/xenial-security/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+gnupg is already the newest version (2.2.27-3ubuntu2.1).
+gnupg set to manually installed.
+The following packages were automatically installed and are no longer required:
+  bridge-utils dns-root-data dnsmasq-base ubuntu-fan
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  apt-transport-https
+The following packages will be upgraded:
+  curl libcurl4
+2 upgraded, 1 newly installed, 0 to remove and 181 not upgraded.
+Need to get 485 kB of archives.
+After this operation, 170 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 apt-transport-https all 2.4.11 [1510 B]
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 curl amd64 7.81.0-1ubuntu1.15 [194 kB]
+Ign:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 curl amd64 7.81.0-1ubuntu1.15
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcurl4 amd64 7.81.0-1ubuntu1.15 [289 kB]
+Ign:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcurl4 amd64 7.81.0-1ubuntu1.15
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 curl amd64 7.81.0-1ubuntu1.15 [194 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcurl4 amd64 7.81.0-1ubuntu1.15 [289 kB]
+Fetched 379 kB in 1min 48s (3497 B/s)
+Selecting previously unselected package apt-transport-https.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45527 files and directories currently installed.)
+Preparing to unpack .../apt-transport-https_2.4.11_all.deb ...
+Unpacking apt-transport-https (2.4.11) ...
+Preparing to unpack .../curl_7.81.0-1ubuntu1.15_amd64.deb ...
+Unpacking curl (7.81.0-1ubuntu1.15) over (7.81.0-1ubuntu1.10) ...
+Preparing to unpack .../libcurl4_7.81.0-1ubuntu1.15_amd64.deb ...
+Unpacking libcurl4:amd64 (7.81.0-1ubuntu1.15) over (7.81.0-1ubuntu1.10) ...
+Setting up apt-transport-https (2.4.11) ...
+Setting up libcurl4:amd64 (7.81.0-1ubuntu1.15) ...
+Setting up curl (7.81.0-1ubuntu1.15) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+E: Setting in Stop via TCSAFLUSH for stdin failed! - tcsetattr (4: Interrupted system call)
+E: Setting in Stop via TCSAFLUSH for stdin failed! - tcsetattr (4: Interrupted system call)
